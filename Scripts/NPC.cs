@@ -14,9 +14,17 @@ public class NPC : MonoBehaviour
 
     public float wordSpeed;
     public bool playerIsClose;
+    //public AudioSource audioSource;
+    //public AudioClip clip;
+
 
     public GameObject npc;
     public GameObject npcAtTable;
+
+    void Start()
+    {
+        //audioData = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -55,6 +63,7 @@ public class NPC : MonoBehaviour
 
         foreach (char letter in dialogue[index].ToCharArray()) {
 
+            //audioSource.Play();
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
         
@@ -77,6 +86,7 @@ public class NPC : MonoBehaviour
             zeroText();
             npc.SetActive(false);
             npcAtTable.SetActive(true);
+
         }
     
     }

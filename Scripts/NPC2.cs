@@ -72,7 +72,7 @@ public class NPC2 : MonoBehaviour
         {
 
             StartCoroutine(ActivationRoutineNo());
-            KeepScore.score -= 0.01f;
+            KeepScore.score -= 1.0f;
 
         }
         else if (cake.activeSelf && xcount == 3)
@@ -84,7 +84,7 @@ public class NPC2 : MonoBehaviour
         else if (cake.activeSelf && xcount != 3)
         {
             StartCoroutine(ActivationRoutineNo());
-            KeepScore.score -= 0.01f;
+            KeepScore.score -= 1.0f;
 
         }
         else if (toast.activeSelf && xcount == 2)
@@ -98,7 +98,7 @@ public class NPC2 : MonoBehaviour
         {
 
             StartCoroutine(ActivationRoutineNo());
-            KeepScore.score -= 0.01f;
+            KeepScore.score -= 1.0f;
 
         }
         else
@@ -126,7 +126,7 @@ public class NPC2 : MonoBehaviour
         //Turn My game object that is set to false(off) to True(on).
         no.SetActive(true);
         //Turn the Game Oject back off after 1 sec.
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(3);
         //Game object will turn off
         no.SetActive(false);
     }

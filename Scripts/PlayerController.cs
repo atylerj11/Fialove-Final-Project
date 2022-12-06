@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-  public float speed;
+    public float speed;
+    public GameObject nextLvlScreen;
+    public GameObject currentCanvas;
 
     private void Start()
     {
@@ -35,5 +37,12 @@ public class PlayerController : MonoBehaviour
 
         dir.Normalize();
         GetComponent<Rigidbody2D>().velocity = speed * dir;
+
+        if(KeepScore.score >= 25){
+            //Debug.Log($"Score above 25");
+            nextLvlScreen.SetActive(true);
+            currentCanvas.SetActive(false);
+
+        }
     }
 }
