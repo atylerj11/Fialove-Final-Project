@@ -72,7 +72,7 @@ public class NPC2 : MonoBehaviour
         {
 
             StartCoroutine(ActivationRoutineNo());
-            KeepScore.score -= 1.0f;
+            KeepScore.score -= .5f;
 
         }
         else if (cake.activeSelf && xcount == 3)
@@ -84,7 +84,7 @@ public class NPC2 : MonoBehaviour
         else if (cake.activeSelf && xcount != 3)
         {
             StartCoroutine(ActivationRoutineNo());
-            KeepScore.score -= 1.0f;
+            KeepScore.score -= .5f;
 
         }
         else if (toast.activeSelf && xcount == 2)
@@ -98,7 +98,7 @@ public class NPC2 : MonoBehaviour
         {
 
             StartCoroutine(ActivationRoutineNo());
-            KeepScore.score -= 1.0f;
+            KeepScore.score -= .5f;
 
         }
         else
